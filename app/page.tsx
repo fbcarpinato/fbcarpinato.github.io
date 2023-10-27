@@ -1,9 +1,10 @@
-import { Hero } from '../components/molecules';
+import { Hero, ProjectList } from '../components/molecules';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <ProjectList />
     </>
   );
 }

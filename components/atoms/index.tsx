@@ -5,3 +5,5 @@ export * from './NavbarTwoColumns';
 export * from './Section';
 export * from './GradientText';
 export * from './HeroAvatar';
+export * from './Project';
+export * from './Tag';
