@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import clsx from 'clsx';
 
-import { Navbar } from '../components/molecules';
+import { Footer, Navbar } from '../components/molecules';
 
 import './globals.css';
 
@@ -24,6 +24,7 @@ export default function RootLayout({
       <body className={clsx(inter.className, 'bg-slate-900 text-gray-100')}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
