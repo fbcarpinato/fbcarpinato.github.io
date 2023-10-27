@@ -1,5 +1,9 @@
-import Image from 'next/image';
+import { Hero } from '../components/molecules';
 
 export default function Home() {
-  return <main></main>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
