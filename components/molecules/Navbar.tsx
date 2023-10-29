@@ -14,7 +14,6 @@ const Navbar = () => (
       </a>
 
       <NavMenu>
-        <NavMenuItem href="/posts/">Blog</NavMenuItem>
         <NavMenuItem href="https://github.com/fbcarpinato">GitHub</NavMenuItem>
       </NavMenu>
     </NavbarTwoColumns>
