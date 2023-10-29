@@ -16,6 +16,9 @@ const Navbar = () => (
 
       <NavMenu>
         <NavMenuItem href="https://github.com/fbcarpinato">GitHub</NavMenuItem>
+        <NavMenuItem href="https://www.linkedin.com/in/fabio-carpinato-aa5093208/">
+          LinkedIn
+        </NavMenuItem>
       </NavMenu>
     </NavbarTwoColumns>
   </Section>
