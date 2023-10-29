@@ -1,6 +1,6 @@
 import { Octokit } from '@octokit/core';
 
-import { Hero, ProjectList, ExperienceList } from '../components/molecules';
+import { Hero, ProjectList, ExperienceList } from '../components';
 import { Repository } from '../interfaces';
 
 const octokit = new Octokit({
