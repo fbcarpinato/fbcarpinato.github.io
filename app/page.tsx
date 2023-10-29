@@ -1,4 +1,5 @@
 import { Octokit } from '@octokit/core';
+import { User } from '@octokit/graphql-schema';
 
 import { Hero, ProjectList, ExperienceList } from '../components';
 import { Repository } from '../interfaces';
@@ -9,13 +10,7 @@ const octokit = new Octokit({
 
 async function getLatestRepos(): Promise<Repository[]> {
   try {
-    const response = await octokit.graphql<{
-      user: {
-        repositories: {
-          edges: { node: any }[];
-        };
-      };
-    }>(
+    const response = await octokit.graphql<{ user: User }>(
       `query ($login: String!) {
         user(login: $login) {
           repositories(privacy: PUBLIC, first: 10, orderBy: { field: UPDATED_AT, direction: DESC }) {
@@ -42,10 +37,10 @@ async function getLatestRepos(): Promise<Repository[]> {
       { login: 'fbcarpinato' }
     );
 
-    return (response?.user?.repositories?.edges || []).map(({ node }) => ({
-      ...node,
-      languages: node.languages.edges.map(
-        (languageEdge: any) => languageEdge.node
+    return (response?.user?.repositories?.edges || []).map((edge) => ({
+      ...edge?.node,
+      languages: (edge?.node?.languages?.edges || []).map(
+        (languageEdge) => languageEdge?.node
       ),
     })) as Repository[];
   } catch (error) {
