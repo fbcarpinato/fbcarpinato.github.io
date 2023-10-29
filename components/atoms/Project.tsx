@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import Image from 'next/image';
 
 type IProjectProps = {
   img: {
@@ -15,11 +16,13 @@ const Project = (props: IProjectProps) => (
   <div className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
     <div className="shrink-0">
       <a href={props.link}>
-        <img
+        <Image
           className="h-36 w-36 hover:translate-y-1"
           src={props.img.src}
           alt={props.img.alt}
           loading="lazy"
+          height={144}
+          width={144}
         />
       </a>
     </div>
