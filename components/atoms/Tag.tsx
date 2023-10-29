@@ -27,7 +27,21 @@ export const ColorTags = {
   ROSE: 'ROSE',
 } as const;
 
-export const TechColors = {
+export const LanguageColors: Record<string, Values<typeof ColorTags>> = {
+  CSS: ColorTags.AMBER,
+  TypeScript: ColorTags.SKY,
+  Rust: ColorTags.ORANGE,
+  'C++': ColorTags.RED,
+  C: ColorTags.GREEN,
+  JavaScript: ColorTags.YELLOW,
+  HTML: ColorTags.PURPLE,
+  CMake: ColorTags.RED,
+  Python: ColorTags.LIME,
+  'C#': ColorTags.ROSE,
+  GLSL: ColorTags.BLUE,
+};
+
+export const TechColors: Record<string, Values<typeof ColorTags>> = {
   'Node.JS': ColorTags.PINK,
   React: ColorTags.GRAY,
   GCP: ColorTags.SKY,
