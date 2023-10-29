@@ -27,6 +27,19 @@ export const ColorTags = {
   ROSE: 'ROSE',
 } as const;
 
+export const TechColors = {
+  'Node.JS': ColorTags.PINK,
+  React: ColorTags.GRAY,
+  GCP: ColorTags.SKY,
+  Docker: ColorTags.AMBER,
+  GraphQL: ColorTags.BLUE,
+  MySQL: ColorTags.FUCHSIA,
+  Laravel: ColorTags.EMERALD,
+  Angular: ColorTags.ORANGE,
+  Microservices: ColorTags.CYAN,
+  Magento: ColorTags.RED,
+};
+
 type ITagsProps = {
   color: Values<typeof ColorTags>;
   children: ReactNode;
