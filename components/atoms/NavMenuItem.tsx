@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 type INavMenuItemProps = {
   href: string;
   children: string;
@@ -6,9 +8,9 @@ type INavMenuItemProps = {
 
 const NavMenuItem = (props: INavMenuItemProps) => (
   <li className="hover:text-white">
-    <a href={props.href} target={props.target || '_self'}>
+    <Link href={props.href} target={props.target || '_self'}>
       {props.children}
-    </a>
+    </Link>
   </li>
 );
 

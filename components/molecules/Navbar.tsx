@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   Logo,
   NavbarTwoColumns,
@@ -9,9 +10,9 @@ import {
 const Navbar = () => (
   <Section>
     <NavbarTwoColumns>
-      <a href="/">
+      <Link href="/">
         <Logo name="Fabio Carpinato" />
-      </a>
+      </Link>
 
       <NavMenu>
         <NavMenuItem href="https://github.com/fbcarpinato">GitHub</NavMenuItem>
